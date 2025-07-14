@@ -2,6 +2,8 @@
 @use "./styles/variables.scss" as *;
 
 @use "./components/header/header.scss";
+@use "./components/cart/cart.scss";
+@use "./components/product-card/product-card.scss";
 
 body {
   box-sizing: border-box;
@@ -10,6 +12,9 @@ body {
   font-family: $font-family-base;
   color: $color-dark;
   scroll-behavior: smooth;
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 a,
@@ -23,4 +28,10 @@ a {
 
 .removed {
   opacity: 0.2;
+}
+
+footer {
+  background-color: $color-black;
+  width: 100%;
+  height: clamp(202px, 25vw, 310px);
 }

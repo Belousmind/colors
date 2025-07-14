@@ -1,0 +1,92 @@
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/variables.scss" as *;
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp($spacing-15, 1.5vw, $spacing-18);
+  margin-bottom: clamp(64px, 11.75vw, 141px);
+}
+
+.product-card {
+  position: relative;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+
+  color: $color-dark;
+  font-size: $font-16;
+
+  width: clamp(156px, 25vw, 278px);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  @media (hover: hover) and (min-width: 1200px) {
+    &:hover .product-card__button {
+      display: flex;
+    }
+  }
+}
+
+.product-card__images {
+  width: clamp(156px, 25vw, 278px);
+  height: clamp(156px, 25vw, 278px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $spacing-16;
+}
+
+.product-card__image {
+  width: clamp(112.23px, 16.67vw, 200px);
+  height: clamp(112.23px, 16.67vw, 200px);
+
+  display: block;
+}
+
+.product-card__title {
+  font-weight: 300;
+  line-height: 112%;
+  letter-spacing: 0.32px;
+  margin-bottom: clamp($spacing-20, 2vw, $spacing-24);
+}
+
+.product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-22;
+}
+
+.product-card__price {
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.product-card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: $spacing-4 $spacing-12;
+  background-color: $color-light-grey;
+  width: 40px;
+  border-radius: 8px;
+  border: none;
+
+  @media (hover: hover) and (min-width: 1200px) {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: $spacing-14;
+    background-color: $color-mint;
+    padding: 6px 0px;
+    width: 80px;
+  }
+}
+.product-card__button-icon {
+  width: clamp(16px, 1.67vw, 20px);
+  height: clamp(16px, 1.67vw, 20px);
+}
