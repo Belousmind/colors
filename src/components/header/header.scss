@@ -1,0 +1,119 @@
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/variables.scss" as *;
+
+.header {
+  @include flex-center-between;
+
+  padding: 20px 0;
+
+  margin: 0 clamp(24px, 5.33vw, 64px);
+  background-color: $color-white;
+  border-bottom: 1px solid rgba(31, 32, 32, 0.06);
+
+  @media screen and (min-width: 1200px) {
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+.header__logo {
+  width: clamp(99px, 20vw, 131px);
+  height: clamp(21px, 4vw, 26px);
+}
+
+.header__nav {
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.header__burger-button {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  div {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: $color-dark;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.header__nav-list {
+  list-style: none;
+  display: flex;
+  gap: $spacing-24;
+  margin: 0;
+  padding: 0;
+}
+
+.header__nav-link {
+  display: inline-block;
+  text-transform: uppercase;
+  color: $color-dark;
+  padding: $spacing-45 0;
+  font-size: $font-14;
+}
+
+.header__contacts {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+.header__phone {
+  color: $color-dark;
+}
+
+.header__callback-button {
+  color: $color-dark;
+  opacity: 0.3;
+  border: none;
+  background-color: transparent;
+  font-family: $font-family-base;
+  padding: 0;
+}
+
+.header__actions {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: $spacing-24;
+  }
+}
+
+.header__action-button {
+  @media screen and (min-width: 1200px) {
+    display: grid;
+    place-items: center;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+  }
+}
+
+.header__cart-button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: $color-mint;
+  color: $color-dark;
+  font-family: $font-family-base;
+  border: none;
+}
