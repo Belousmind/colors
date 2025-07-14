@@ -8,30 +8,72 @@
   <body>
     <header></header>
     <main>
-      <div class="product-list">
-        <template id="product-card-template">
-          <div class="product-card">
-            <div class="product-card__images">
-              <!-- <img
-                class="product-card__image"
-                src="./color.png"
-                alt="Product image"
-              /> -->
-              <img
-                class="product-card__image"
-                src="./Border.png"
-                alt="Border image"
-              />
-            </div>
+      <div class="cart-modal__content cart">
+        <div class="cart__header">
+          <h2 class="cart__title">Корзина</h2>
+          <button class="cart__close-button">x</button>
+        </div>
 
-            <span class="product-card__title"></span>
-            <span class="product-card__price"></span>
-            <button class="product-card__button">+</button>
+        <div class="cart__body">
+          <div class="cart__top">
+            <span class="cart__info"></span>
+            <button class="cart__clear-button">очистить список</button>
           </div>
-        </template>
+
+          <div class="cart__items"></div>
+
+          <div class="cart__bottom">
+            <span class="cart__total">
+              Итого
+              <span class="cart__total-value"></span>
+            </span>
+            <button class="cart__submit-button">Оформить заказ</button>
+          </div>
+        </div>
       </div>
+      <div class="product-list"></div>
     </main>
     <footer></footer>
     <script type="module" src="/src/main.js"></script>
   </body>
+
+  <template id="cart-item-template">
+    <div class="cart__item">
+      <img class="cart__item-image" src="" alt="Product" />
+      <div class="cart__item-details">
+        <span class="cart__item-title"></span>
+        <span class="cart__item-price"></span>
+      </div>
+      <div class="cart__item-quantity">
+        <button class="cart__quantity-button" data-action="decrease">-</button>
+        <span class="cart__quantity-value"></span>
+        <button class="cart__quantity-button" data-action="increase">+</button>
+      </div>
+      <button class="cart__remove-button" data-action="remove">remove</button>
+      <button class="cart__restore-button" data-action="restore">
+        restore
+      </button>
+    </div>
+  </template>
+
+  <template id="product-card-template">
+    <div class="product-card">
+      <div class="product-card__images">
+        <!-- <img
+                class="product-card__image"
+                src="./color.png"
+                alt="Product image"
+              /> -->
+        <img
+          class="product-card__image"
+          src="./Border.png"
+          alt="Border image"
+        />
+      </div>
+
+      <span class="product-card__title"></span>
+      <span class="product-card__price"></span>
+      <button class="product-card__button">+</button>
+    </div>
+  </template>
 </html>
