@@ -6,7 +6,7 @@
       "rub": 4800
     },
     "quantity": 0,
-    "imageSrc": "/images/color-4.png",
+    "imageSrc": "/colors/color-4.png",
     "new": false,
     "contract": false,
     "exclusive": false,
@@ -19,7 +19,7 @@
       "rub": 5290
     },
     "quantity": 0,
-    "imageSrc": "/images/color-2.png",
+    "imageSrc": "/colors/color-2.png",
     "new": false,
     "contract": false,
     "exclusive": false,
@@ -32,7 +32,7 @@
       "rub": 5290
     },
     "quantity": 5,
-    "imageSrc": "/images/color-2.png",
+    "imageSrc": "/colors/color-2.png",
     "new": false,
     "contract": true,
     "exclusive": false,
@@ -45,7 +45,7 @@
       "rub": 5290
     },
     "quantity": 1,
-    "imageSrc": "/images/color-2.png",
+    "imageSrc": "/colors/color-2.png",
     "new": false,
     "contract": true,
     "exclusive": true,
@@ -58,7 +58,7 @@
       "rub": 3400
     },
     "quantity": 5,
-    "imageSrc": "/images/color-4.png",
+    "imageSrc": "/colors/color-4.png",
     "new": false,
     "contract": false,
     "exclusive": true,
@@ -71,7 +71,7 @@
       "rub": 6000
     },
     "quantity": 5,
-    "imageSrc": "/images/color-3.png",
+    "imageSrc": "/colors/color-3.png",
     "new": false,
     "contract": true,
     "exclusive": true,
@@ -84,7 +84,7 @@
       "rub": 5290
     },
     "quantity": 0,
-    "imageSrc": "/images/color-4.png",
+    "imageSrc": "/colors/color-4.png",
     "new": false,
     "contract": true,
     "exclusive": true,
@@ -97,7 +97,7 @@
       "rub": 5290
     },
     "quantity": 0,
-    "imageSrc": "/images/color-1.png",
+    "imageSrc": "/colors/color-1.png",
     "new": false,
     "contract": false,
     "exclusive": false,
@@ -110,7 +110,7 @@
       "rub": 2800
     },
     "quantity": 10,
-    "imageSrc": "/images/color-2.png",
+    "imageSrc": "/colors/color-2.png",
     "new": false,
     "contract": false,
     "exclusive": true,
@@ -123,7 +123,7 @@
       "rub": 3400
     },
     "quantity": 1,
-    "imageSrc": "/images/color-1.png",
+    "imageSrc": "/colors/color-1.png",
     "new": false,
     "contract": false,
     "exclusive": false,
@@ -136,7 +136,7 @@
       "rub": 6000
     },
     "quantity": 15,
-    "imageSrc": "/images/color-4.png",
+    "imageSrc": "/colors/color-4.png",
     "new": false,
     "contract": false,
     "exclusive": false,
@@ -149,7 +149,7 @@
       "rub": 3400
     },
     "quantity": 0,
-    "imageSrc": "/images/color-2.png",
+    "imageSrc": "/colors/color-2.png",
     "new": true,
     "contract": false,
     "exclusive": false,
@@ -162,7 +162,7 @@
       "rub": 5290
     },
     "quantity": 15,
-    "imageSrc": "/images/color-1.png",
+    "imageSrc": "/colors/color-1.png",
     "new": false,
     "contract": true,
     "exclusive": false,
@@ -175,7 +175,7 @@
       "rub": 2800
     },
     "quantity": 1,
-    "imageSrc": "/images/color-6.png",
+    "imageSrc": "/colors/color-6.png",
     "new": false,
     "contract": false,
     "exclusive": true,
@@ -188,7 +188,7 @@
       "rub": 4800
     },
     "quantity": 10,
-    "imageSrc": "/images/color-6.png",
+    "imageSrc": "/colors/color-6.png",
     "new": false,
     "contract": true,
     "exclusive": true,
@@ -201,7 +201,7 @@
       "rub": 2800
     },
     "quantity": 1,
-    "imageSrc": "/images/color-2.png",
+    "imageSrc": "/colors/color-2.png",
     "new": false,
     "contract": true,
     "exclusive": true,
@@ -214,7 +214,7 @@
       "rub": 2800
     },
     "quantity": 10,
-    "imageSrc": "/images/color-6.png",
+    "imageSrc": "/colors/color-6.png",
     "new": false,
     "contract": false,
     "exclusive": true,
@@ -227,7 +227,7 @@
       "rub": 2800
     },
     "quantity": 10,
-    "imageSrc": "/images/color-6.png",
+    "imageSrc": "/colors/color-6.png",
     "new": true,
     "contract": false,
     "exclusive": false,
@@ -240,7 +240,7 @@
       "rub": 3400
     },
     "quantity": 1,
-    "imageSrc": "/images/color-5.png",
+    "imageSrc": "/colors/color-5.png",
     "new": false,
     "contract": false,
     "exclusive": true,
@@ -253,7 +253,7 @@
       "rub": 2800
     },
     "quantity": 15,
-    "imageSrc": "/images/color-3.png",
+    "imageSrc": "/colors/color-3.png",
     "new": false,
     "contract": false,
     "exclusive": true,
@@ -266,7 +266,7 @@
       "rub": 4800
     },
     "quantity": 1,
-    "imageSrc": "/images/color-2.png",
+    "imageSrc": "/colors/color-2.png",
     "new": false,
     "contract": false,
     "exclusive": false,
@@ -279,7 +279,7 @@
       "rub": 5290
     },
     "quantity": 5,
-    "imageSrc": "/images/color-3.png",
+    "imageSrc": "/colors/color-3.png",
     "new": false,
     "contract": true,
     "exclusive": true,
@@ -292,7 +292,7 @@
       "rub": 3400
     },
     "quantity": 5,
-    "imageSrc": "/images/color-6.png",
+    "imageSrc": "/colors/color-6.png",
     "new": true,
     "contract": false,
     "exclusive": true,
@@ -305,7 +305,7 @@
       "rub": 2800
     },
     "quantity": 15,
-    "imageSrc": "/images/color-3.png",
+    "imageSrc": "/colors/color-3.png",
     "new": false,
     "contract": false,
     "exclusive": true,
@@ -318,7 +318,7 @@
       "rub": 2800
     },
     "quantity": 15,
-    "imageSrc": "/images/color-5.png",
+    "imageSrc": "/colors/color-5.png",
     "new": true,
     "contract": true,
     "exclusive": false,
@@ -331,7 +331,7 @@
       "rub": 3400
     },
     "quantity": 5,
-    "imageSrc": "/images/color-4.png",
+    "imageSrc": "/colors/color-4.png",
     "new": true,
     "contract": true,
     "exclusive": true,
@@ -344,7 +344,7 @@
       "rub": 3400
     },
     "quantity": 5,
-    "imageSrc": "/images/color-1.png",
+    "imageSrc": "/colors/color-1.png",
     "new": false,
     "contract": false,
     "exclusive": true,
@@ -357,7 +357,7 @@
       "rub": 4800
     },
     "quantity": 15,
-    "imageSrc": "/images/color-1.png",
+    "imageSrc": "/colors/color-1.png",
     "new": false,
     "contract": false,
     "exclusive": true,
@@ -370,7 +370,7 @@
       "rub": 4800
     },
     "quantity": 0,
-    "imageSrc": "/images/color-4.png",
+    "imageSrc": "/colors/color-4.png",
     "new": true,
     "contract": true,
     "exclusive": false,
@@ -383,7 +383,7 @@
       "rub": 4800
     },
     "quantity": 10,
-    "imageSrc": "/images/color-1.png",
+    "imageSrc": "/colors/color-1.png",
     "new": false,
     "contract": false,
     "exclusive": true,
