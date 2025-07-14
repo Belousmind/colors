@@ -4,6 +4,8 @@
 @use "./components/header/header.scss";
 @use "./components/cart/cart.scss";
 @use "./components/product-card/product-card.scss";
+@use "./components/filters/filters.scss";
+@use "./components/sorting/sorting.scss";
 
 body {
   box-sizing: border-box;
@@ -34,4 +36,10 @@ footer {
   background-color: $color-black;
   width: 100%;
   height: clamp(202px, 25vw, 310px);
+}
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }

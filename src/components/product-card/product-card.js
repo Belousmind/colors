@@ -5,8 +5,8 @@ import { renderCart } from "../cart/cart-render";
 const cardTemplate = document.querySelector("#product-card-template");
 export const cardsContainer = document.querySelector(".product-list");
 
-export function CardsRender() {
-  colors.forEach((color) => {
+export function CardsRender(data) {
+  data.forEach((color) => {
     const card = cardTemplate.content.cloneNode(true);
 
     const image = card.querySelector(".product-card__image");

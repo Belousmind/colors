@@ -76,19 +76,25 @@
         </div>
       </div>
       <section class="catalog">
-        <div class="catalog__filters">
-          <!-- for filters -->
-        </div>
+        <div class="catalog__filters"></div>
 
-        <span class="catalog__count">412 товаров</span>
+        <span class="catalog__count">30 товаров</span>
 
-        <div class="catalog__sort">Сначала дорогие</div>
+        <div class="catalog__sort"></div>
         <div class="product-list"></div>
       </section>
     </main>
     <footer></footer>
     <script type="module" src="/src/main.js"></script>
   </body>
+
+  <template id="toggle-template">
+    <label class="toggle">
+      <input type="checkbox" class="toggle__input" />
+      <span class="toggle__slider"></span>
+      <span class="toggle__label"></span>
+    </label>
+  </template>
 
   <template id="cart-item-template">
     <div class="cart__item">

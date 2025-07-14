@@ -1,0 +1,9 @@
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/variables.scss" as *;
+
+.catalog__sort {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 120px;
+}

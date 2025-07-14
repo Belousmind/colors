@@ -10,7 +10,8 @@
     "new": false,
     "contract": false,
     "exclusive": false,
-    "sale": false
+    "sale": false,
+    "popular": true
   },
   {
     "id": 2,
@@ -23,7 +24,8 @@
     "new": false,
     "contract": false,
     "exclusive": false,
-    "sale": false
+    "sale": false,
+    "popular": true
   },
   {
     "id": 3,
@@ -36,7 +38,8 @@
     "new": false,
     "contract": true,
     "exclusive": false,
-    "sale": true
+    "sale": true,
+    "popular": true
   },
   {
     "id": 4,
@@ -49,7 +52,8 @@
     "new": false,
     "contract": true,
     "exclusive": true,
-    "sale": true
+    "sale": true,
+    "popular": false
   },
   {
     "id": 5,
@@ -62,7 +66,8 @@
     "new": false,
     "contract": false,
     "exclusive": true,
-    "sale": false
+    "sale": false,
+    "popular": true
   },
   {
     "id": 6,
@@ -75,7 +80,8 @@
     "new": false,
     "contract": true,
     "exclusive": true,
-    "sale": true
+    "sale": true,
+    "popular": false
   },
   {
     "id": 7,
@@ -88,7 +94,8 @@
     "new": false,
     "contract": true,
     "exclusive": true,
-    "sale": false
+    "sale": false,
+    "popular": true
   },
   {
     "id": 8,
@@ -101,7 +108,8 @@
     "new": false,
     "contract": false,
     "exclusive": false,
-    "sale": false
+    "sale": false,
+    "popular": false
   },
   {
     "id": 9,
@@ -114,7 +122,8 @@
     "new": false,
     "contract": false,
     "exclusive": true,
-    "sale": false
+    "sale": false,
+    "popular": true
   },
   {
     "id": 10,
@@ -127,7 +136,8 @@
     "new": false,
     "contract": false,
     "exclusive": false,
-    "sale": true
+    "sale": true,
+    "popular": false
   },
   {
     "id": 11,
@@ -140,7 +150,8 @@
     "new": false,
     "contract": false,
     "exclusive": false,
-    "sale": true
+    "sale": true,
+    "popular": false
   },
   {
     "id": 12,
@@ -153,7 +164,8 @@
     "new": true,
     "contract": false,
     "exclusive": false,
-    "sale": false
+    "sale": false,
+    "popular": true
   },
   {
     "id": 13,
@@ -166,7 +178,8 @@
     "new": false,
     "contract": true,
     "exclusive": false,
-    "sale": true
+    "sale": true,
+    "popular": false
   },
   {
     "id": 14,
@@ -179,7 +192,8 @@
     "new": false,
     "contract": false,
     "exclusive": true,
-    "sale": true
+    "sale": true,
+    "popular": false
   },
   {
     "id": 15,
@@ -192,7 +206,8 @@
     "new": false,
     "contract": true,
     "exclusive": true,
-    "sale": false
+    "sale": false,
+    "popular": true
   },
   {
     "id": 16,
@@ -205,7 +220,8 @@
     "new": false,
     "contract": true,
     "exclusive": true,
-    "sale": true
+    "sale": true,
+    "popular": true
   },
   {
     "id": 17,
@@ -218,7 +234,8 @@
     "new": false,
     "contract": false,
     "exclusive": true,
-    "sale": false
+    "sale": false,
+    "popular": false
   },
   {
     "id": 18,
@@ -231,7 +248,8 @@
     "new": true,
     "contract": false,
     "exclusive": false,
-    "sale": false
+    "sale": false,
+    "popular": false
   },
   {
     "id": 19,
@@ -244,7 +262,8 @@
     "new": false,
     "contract": false,
     "exclusive": true,
-    "sale": true
+    "sale": true,
+    "popular": true
   },
   {
     "id": 20,
@@ -257,7 +276,8 @@
     "new": false,
     "contract": false,
     "exclusive": true,
-    "sale": false
+    "sale": false,
+    "popular": true
   },
   {
     "id": 21,
@@ -270,7 +290,8 @@
     "new": false,
     "contract": false,
     "exclusive": false,
-    "sale": false
+    "sale": false,
+    "popular": false
   },
   {
     "id": 22,
@@ -283,7 +304,8 @@
     "new": false,
     "contract": true,
     "exclusive": true,
-    "sale": true
+    "sale": true,
+    "popular": false
   },
   {
     "id": 23,
@@ -296,7 +318,8 @@
     "new": true,
     "contract": false,
     "exclusive": true,
-    "sale": false
+    "sale": false,
+    "popular": true
   },
   {
     "id": 24,
@@ -309,7 +332,8 @@
     "new": false,
     "contract": false,
     "exclusive": true,
-    "sale": false
+    "sale": false,
+    "popular": false
   },
   {
     "id": 25,
@@ -322,7 +346,8 @@
     "new": true,
     "contract": true,
     "exclusive": false,
-    "sale": false
+    "sale": false,
+    "popular": true
   },
   {
     "id": 26,
@@ -335,7 +360,8 @@
     "new": true,
     "contract": true,
     "exclusive": true,
-    "sale": false
+    "sale": false,
+    "popular": true
   },
   {
     "id": 27,
@@ -348,7 +374,8 @@
     "new": false,
     "contract": false,
     "exclusive": true,
-    "sale": false
+    "sale": false,
+    "popular": false
   },
   {
     "id": 28,
@@ -361,7 +388,8 @@
     "new": false,
     "contract": false,
     "exclusive": true,
-    "sale": false
+    "sale": false,
+    "popular": true
   },
   {
     "id": 29,
@@ -374,7 +402,8 @@
     "new": true,
     "contract": true,
     "exclusive": false,
-    "sale": false
+    "sale": false,
+    "popular": true
   },
   {
     "id": 30,
@@ -387,6 +416,7 @@
     "new": false,
     "contract": false,
     "exclusive": true,
-    "sale": true
+    "sale": true,
+    "popular": true
   }
 ]

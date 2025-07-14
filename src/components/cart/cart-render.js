@@ -5,6 +5,8 @@ import { cartItemsContainer, CartItemsRender } from "./cart";
 const totalCountElement = document.querySelector(".cart__info");
 const totalSumElement = document.querySelector(".cart__total-value");
 
+const totalSumHeader = document.querySelector(".header__cart-button");
+
 export function renderCart() {
   cartItemsContainer.innerHTML = "";
 
@@ -16,6 +18,7 @@ export function renderCart() {
   const word = getItemWord(totalCount);
   const totalPrice = getTotalPrice(cart);
 
+  totalSumHeader.textContent = totalCount;
   totalSumElement.textContent = `${totalPrice.toLocaleString("ru-RU")} ₽`;
   totalCountElement.textContent = `${totalCount} ${word}`;
 }
