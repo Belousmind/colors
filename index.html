@@ -50,31 +50,28 @@
       <button class="header__cart-button">0</button>
     </header>
     <main>
-      <div class="cart-modal">
-        <div class="cart-modal__overlay"></div>
-        <div class="cart-modal__content cart">
-          <div class="cart__header">
-            <h2 class="cart__title">Корзина</h2>
-            <button class="cart__close-button">
-              <img src="/icons/cross.svg" alt="cross" />
-            </button>
+      <div class="cart">
+        <div class="cart__header">
+          <h2 class="cart__title">Корзина</h2>
+          <button class="cart__close-button">
+            <img src="/icons/cross.svg" alt="cross" />
+          </button>
+        </div>
+
+        <div class="cart__body">
+          <div class="cart__top">
+            <span class="cart__info"></span>
+            <button class="cart__clear-button">очистить список</button>
           </div>
 
-          <div class="cart__body">
-            <div class="cart__top">
-              <span class="cart__info"></span>
-              <button class="cart__clear-button">очистить список</button>
-            </div>
+          <div class="cart__items"></div>
 
-            <div class="cart__items"></div>
-
-            <div class="cart__bottom">
-              <span class="cart__total">
-                Итого
-                <span class="cart__total-value"></span>
-              </span>
-              <button class="cart__submit-button">Оформить заказ</button>
-            </div>
+          <div class="cart__bottom">
+            <span class="cart__total">
+              Итого
+              <span class="cart__total-value"></span>
+            </span>
+            <button class="cart__submit-button">Оформить заказ</button>
           </div>
         </div>
       </div>

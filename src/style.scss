@@ -6,6 +6,7 @@
 @use "./components/product-card/product-card.scss";
 @use "./components/filters/filters.scss";
 @use "./components/sorting/sorting.scss";
+@use "./components/modal/modal.scss";
 
 body,
 *::before,
@@ -17,6 +18,10 @@ body,
   color: $color-dark;
   scroll-behavior: smooth;
   background-color: $color-white;
+  overflow-x: hidden;
+}
+
+body {
   &.no-scroll {
     overflow: hidden;
   }

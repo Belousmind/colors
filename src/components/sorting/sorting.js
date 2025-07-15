@@ -1,10 +1,13 @@
 import { setSort } from "../../store/catalog-store";
 import { renderFilteredCards } from "../../utils/filters-and-sorting";
+import { openModal, closeModal } from "../modal/modal";
 
 import colors from "../../../colors.json";
 
 const sortContainer = document.querySelector(".catalog__sort-list");
 const sortLabel = document.querySelector(".catalog__sort-label");
+
+const sortButton = document.querySelector(".catalog__sort-toggle");
 
 const sortingOptions = {
   expensive: "Сначала дорогие",
@@ -29,45 +32,26 @@ Object.entries(sortingOptions).forEach(([key, label], index) => {
   sortContainer.appendChild(button);
 });
 
+sortButton.addEventListener("click", () => {
+  openModal(sortContainer);
+});
+
 sortContainer.addEventListener("click", (event) => {
   const target = event.target;
   if (target.tagName === "BUTTON") {
     const selectedSort = target.dataset.sort;
 
-    
     setSort(selectedSort);
 
-    
     document.querySelectorAll(".catalog__sort-option").forEach((btn) => {
       btn.classList.remove("selected");
     });
 
-
     target.classList.add("selected");
-
 
     sortLabel.textContent = target.textContent;
 
     renderFilteredCards(colors);
-
-
-    sortContainer.classList.remove("open");
-    modalOverlay.classList.remove("visible");
-    document.body.classList.remove("no-scroll");
+    closeModal();
   }
-});
-
-const sortButton = document.querySelector(".catalog__sort-toggle");
-const modalOverlay = document.querySelector(".modal-overlay");
-
-sortButton.addEventListener("click", (e) => {
-  sortContainer.classList.toggle("open");
-  modalOverlay.classList.toggle("visible");
-  document.body.classList.toggle("no-scroll");
-});
-
-modalOverlay.addEventListener("click", () => {
-  sortContainer.classList.toggle("open");
-  modalOverlay.classList.toggle("visible");
-  document.body.classList.toggle("no-scroll");
 });

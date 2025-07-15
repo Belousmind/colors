@@ -1,5 +1,6 @@
 import { updateCartItem, clearCart } from "../../store/cart-store";
 import { renderCart } from "./cart-render";
+import { openModal, closeModal } from "../modal/modal";
 
 export const cartItemsContainer = document.querySelector(".cart__items");
 const cartItemTemplate = document.querySelector("#cart-item-template");
@@ -51,4 +52,16 @@ const clearButton = document.querySelector(".cart__clear-button");
 clearButton.addEventListener("click", () => {
   clearCart();
   renderCart();
+});
+
+const cartButton = document.querySelector(".header__cart-button");
+const cartMenu = document.querySelector(".cart");
+const cartCloseButton = document.querySelector(".cart__close-button");
+
+cartButton.addEventListener("click", () => {
+  openModal(cartMenu);
+});
+
+cartCloseButton.addEventListener("click", () => {
+  closeModal();
 });
