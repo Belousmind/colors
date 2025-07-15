@@ -4,7 +4,7 @@ import { setFilters } from "../../store/catalog-store";
 import { renderFilteredCards } from "../../utils/filters-and-sorting";
 
 const toggleTemplate = document.querySelector("#toggle-template");
-const toggleContainer = document.querySelector(".catalog__filters");
+const toggleContainer = document.querySelector(".catalog__filters-panel");
 
 const filters = {
   new: "Новинки",
@@ -33,4 +33,19 @@ Object.entries(filters).forEach(([filterKey, labelText]) => {
   });
 
   toggleContainer.append(clone);
+});
+
+const filtersButton = document.querySelector(".catalog__filters-button");
+const modalOverlay = document.querySelector(".modal-overlay");
+
+filtersButton.addEventListener("click", (e) => {
+  toggleContainer.classList.toggle("open");
+  modalOverlay.classList.toggle("visible");
+  document.body.classList.toggle("no-scroll");
+});
+
+modalOverlay.addEventListener("click", () => {
+  modalOverlay.classList.toggle("visible");
+  toggleContainer.classList.toggle("open");
+  document.body.classList.toggle("no-scroll");
 });

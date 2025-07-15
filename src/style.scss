@@ -7,13 +7,16 @@
 @use "./components/filters/filters.scss";
 @use "./components/sorting/sorting.scss";
 
-body {
+body,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: $font-family-base;
   color: $color-dark;
   scroll-behavior: smooth;
+  
   &.no-scroll {
     overflow: hidden;
   }

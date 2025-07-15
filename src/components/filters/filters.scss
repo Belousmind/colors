@@ -2,11 +2,11 @@
 @use "../../styles/variables.scss" as *;
 
 .catalog__filters {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  // display: flex;
+  // flex-direction: column;
+  // gap: 10px;
 
-  margin: 40px;
+  // margin: 40px;
 }
 
 .toggle {
@@ -20,20 +20,20 @@
   }
 
   &__slider {
-    width: 40px;
-    height: 20px;
+    width: 36px;
+    height: 22px;
     background-color: $color-light-grey;
-    border-radius: 10px;
+    border-radius: 12px;
     position: relative;
     transition: background-color 0.3s;
 
     &::before {
       content: "";
       position: absolute;
-      width: 12px;
-      height: 12px;
-      top: 4px;
-      left: 4px;
+      width: 8px;
+      height: 8px;
+      top: 7px;
+      left: 7px;
       background-color: $color-dark;
       border-radius: 50%;
       transition: transform 0.3s, background-color 0.3s;
@@ -44,14 +44,71 @@
     background-color: $color-mint;
 
     &::before {
-      transform: translateX(20px);
+      transform: translateX(14px);
     }
   }
 
   &__label {
-    font-size: 16px;
+    font-size: $font-12;
     color: $color-dark;
     letter-spacing: 0.72px;
     text-transform: uppercase;
+  }
+}
+
+.catalog__filters-button {
+  background-color: transparent;
+  text-transform: uppercase;
+  border: none;
+  padding: 0;
+
+  letter-spacing: 0.72px;
+  font-weight: 500;
+  color: $color-dark;
+  font-size: $spacing-12;
+
+  @media screen and (min-width: 560px) {
+    display: none;
+  }
+}
+
+.catalog__filters-panel {
+  position: fixed;
+  bottom: -100%;
+  background-color: $color-white;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+  padding: 54px 24px 114px 24px;
+  border-radius: 24px 24px 0px 0px;
+  transition: bottom 0.2s ease-out;
+  &.open {
+    bottom: 0;
+  }
+
+  @media screen and (min-width: 560px) {
+    position: static;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+.modal-overlay {
+  opacity: 0;
+  visibility: hidden;
+  background-color: $color-black;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 5;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &.visible {
+    opacity: 0.7;
+    visibility: visible;
   }
 }
