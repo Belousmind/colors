@@ -8,9 +8,7 @@ import colors from "../colors.json";
 import { CardsRender } from "./components/product-card/product-card";
 
 
-
-
-
 CardsRender(colors);
 
+// console.log(window.innerWidth)
 

@@ -41,7 +41,6 @@ export function renderFilteredCards(data) {
   }
   const catalogCount = document.querySelector(".catalog__count");
   catalogCount.textContent = `${filtered.length} ${getItemWord(filtered)}`;
-  console.log(filtered);
   cardsContainer.innerHTML = "";
   CardsRender(filtered);
 }
