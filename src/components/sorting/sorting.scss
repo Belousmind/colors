@@ -2,8 +2,55 @@
 @use "../../styles/variables.scss" as *;
 
 .catalog__sort {
+  position: relative;
+}
+
+.catalog__sort-list {
   display: flex;
+
   flex-direction: column;
-  gap: 10px;
-  max-width: 120px;
+  width: 280px;
+
+  opacity: 0;
+  pointer-events: none;
+
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $color-white;
+  z-index: 15;
+  transition: opacity 0.2s ease-out;
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.catalog__sort-option {
+  @include button-text(500);
+  white-space: nowrap;
+
+  @include reset-button(17px 0 24px 16px);
+
+  display: flex;
+  &.selected {
+    background-color: $color-mint;
+  }
+}
+
+.catalog__sort-toggle {
+  @include flex-center-between;
+  @include reset-button;
+  gap: $spacing-4;
+}
+
+.catalog__sort-label {
+  @include button-text(500);
+}
+
+.catalog__sort-icon {
+  width: 10px;
+  height: 10px;
 }

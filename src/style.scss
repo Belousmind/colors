@@ -11,12 +11,12 @@ body,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
   font-family: $font-family-base;
   color: $color-dark;
   scroll-behavior: smooth;
-  
+  background-color: $color-white;
   &.no-scroll {
     overflow: hidden;
   }
@@ -41,8 +41,54 @@ footer {
   height: clamp(202px, 25vw, 310px);
 }
 
+// грид сетка для секшона
+
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  margin: 0 auto;
+  max-width: 1792px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 15px auto;
+
+  padding: 0 clamp(24px, 5.33vw, 64px);
+  margin-top: clamp(48px, 6vw, 72px);
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: auto minmax(15px, clamp(15px, 11.5vw, 138px)) 1fr 1fr;
+    row-gap: 44px;
+  }
+}
+
+.catalog__filters-panel {
+  grid-column: 1;
+  @media screen and (min-width: 768px) {
+    grid-row: span 2;
+  }
+}
+
+.product-list {
+  grid-row: 2;
+  grid-column: span 2;
+
+  @media screen and (min-width: 768px) {
+    grid-row: 2;
+    grid-column: span 3 / 6;
+  }
+}
+
+.catalog__count {
+  @include button-text(500);
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 3;
+    display: block;
+  }
+}
+.catalog__sort {
+  justify-self: flex-end;
+  align-self: flex-end;
+  @media screen and (min-width: 768px) {
+    grid-column: 4;
+  }
 }

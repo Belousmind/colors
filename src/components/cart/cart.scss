@@ -68,11 +68,13 @@
   }
 
   &__clear-button {
+    @include reset-button;
     opacity: 0.4;
     color: $color-black;
     font-family: $font-family-base;
-    background: transparent;
-    border: none;
+    font-size: $font-14;
+    font-weight: 300;
+    line-height: 112%;
   }
 }
 
@@ -139,12 +141,12 @@
 }
 
 .cart__submit-button {
+  @include grid-center;
+
   background-color: $color-mint;
   border: none;
-  font-family: $font-family-base;
-  text-transform: uppercase;
-  color: $color-dark;
-  @include grid-center;
   padding: 21px 58px;
   border-radius: 4px;
+
+  @include button-text(500);
 }

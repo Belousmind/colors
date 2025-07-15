@@ -1,14 +1,6 @@
 @use "../../styles/mixins.scss" as *;
 @use "../../styles/variables.scss" as *;
 
-.catalog__filters {
-  // display: flex;
-  // flex-direction: column;
-  // gap: 10px;
-
-  // margin: 40px;
-}
-
 .toggle {
   display: flex;
   align-items: center;
@@ -49,25 +41,16 @@
   }
 
   &__label {
-    font-size: $font-12;
-    color: $color-dark;
-    letter-spacing: 0.72px;
-    text-transform: uppercase;
+    @include button-text(400);
   }
 }
 
 .catalog__filters-button {
-  background-color: transparent;
-  text-transform: uppercase;
-  border: none;
-  padding: 0;
+  @include reset-button;
 
-  letter-spacing: 0.72px;
-  font-weight: 500;
-  color: $color-dark;
-  font-size: $spacing-12;
+  @include button-text(500);
 
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 }
@@ -89,7 +72,7 @@
     bottom: 0;
   }
 
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 768px) {
     position: static;
     border-radius: 0;
     padding: 0;
