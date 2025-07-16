@@ -2,8 +2,12 @@
 @use "../../styles/variables.scss" as *;
 
 .header {
+  box-sizing: border-box;
   @include flex-center-between;
+
   padding: 20px 0;
+
+  width: calc(100% - clamp(24px, 5.33vw, 64px) * 2);
   margin: 0 clamp(24px, 5.33vw, 64px);
   background-color: $color-white;
   border-bottom: 1px solid rgba(31, 32, 32, 0.06);
@@ -13,8 +17,8 @@
     border-bottom: none;
     max-width: 1920px;
     width: 100%;
-    box-sizing: border-box;
-    margin: 0 auto;
+ 
+    margin: 0;
     display: grid;
     grid-template-columns: auto minmax(12px, 9.6%) 1fr 24px auto;
     justify-content: flex-start;

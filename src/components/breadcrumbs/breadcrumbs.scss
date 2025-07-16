@@ -1,0 +1,60 @@
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/variables.scss" as *;
+
+.breadcrumbs {
+  display: flex;
+  margin-bottom: 48px;
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 32px;
+    left: clamp(24px, 5.33vw, 64px);
+    z-index: 7;
+  }
+}
+
+.breadcrumbs__item {
+  display: flex;
+  align-items: center;
+  opacity: 0.3;
+
+  &:last-child {
+    .breadcrumbs__link {
+      margin: 0;
+    }
+
+    .breadcrumbs__separator {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .breadcrumbs__link {
+      color: $color-white;
+    }
+
+    .breadcrumbs__separator {
+      background-color: $color-white;
+    }
+  }
+}
+
+.breadcrumbs__link {
+  margin-right: $spacing-8;
+  color: $color-dark;
+  font-size: $font-10;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.breadcrumbs__separator {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: $color-dark;
+  margin-right: $spacing-8;
+
+  @media screen and (min-width: 768px) {
+    background-color: $color-white;
+  }
+}

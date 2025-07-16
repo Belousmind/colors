@@ -3,6 +3,7 @@ import "./components/header/header";
 import "./components/filters/filters";
 import "./components/sorting/sorting";
 import "./components/slider/slider";
+import './components/breadcrumbs/breadcrumbs'
 
 import colors from "../colors.json";
 
