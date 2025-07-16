@@ -31,6 +31,6 @@ async function initApp() {
     catalogCount.textContent = `${colors.length} ${getItemWord(colors)}`;
     CardsRender(colorsStore.get());
   } else {
-    console.error('Данные не получены');
+    CardsRender([], true);
   }
 }

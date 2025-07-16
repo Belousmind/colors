@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <title>Colors Store</title>
   </head>
   <body>
@@ -73,7 +74,7 @@
         </div>
 
         <div class="cart__items">
-          <span class="cart__empty-message"
+          <span class="empty-message"
             >Добавьте товары, и они появятся здесь</span
           >
         </div>
@@ -139,10 +140,8 @@
     <script type="module" src="/src/main.js"></script>
   </body>
 
-  <template id="cart-empty-template">
-    <span class="cart__empty-message"
-      >Добавьте товары, и они появятся здесь</span
-    >
+  <template id="empty-template">
+    <span class="empty-message">Добавьте товары, и они появятся здесь</span>
   </template>
 
   <template id="breadcrumbs-item-template">

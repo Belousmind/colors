@@ -1,8 +1,5 @@
 import { getFilters, getSort } from '../store/catalog-store';
-import {
-  CardsRender,
-  cardsContainer,
-} from '../components/product-card/product-card';
+import { CardsRender } from '../components/product-card/product-card';
 import { getItemWord } from './get-item-word';
 import { catalogCount } from '../main';
 
@@ -41,6 +38,6 @@ export function renderFilteredCards(data) {
     filtered = applySorting(filtered, sortKey);
   }
   catalogCount.textContent = `${filtered.length} ${getItemWord(filtered)}`;
-  cardsContainer.innerHTML = '';
+
   CardsRender(filtered);
 }

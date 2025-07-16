@@ -64,3 +64,9 @@ footer {
   height: clamp(202px, 25vw, 310px);
   background-color: $color-black;
 }
+
+.empty-message {
+  font-size: $font-14;
+  text-transform: uppercase;
+  opacity: 0.4;
+}

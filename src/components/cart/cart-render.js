@@ -1,12 +1,17 @@
 import { cart } from '../../store/cart-store';
-import { getTotalItems, getItemWord, getTotalPrice } from '../../utils';
+import {
+  getTotalItems,
+  getItemWord,
+  getTotalPrice,
+  stateMessage,
+} from '../../utils';
 import { cartItemsContainer, CartItemsRender } from './cart';
+import { messages } from '../../constants';
 
 const totalCountElement = document.querySelector('.cart__info');
 const totalSumElement = document.querySelector('.cart__total-value');
 
 const totalSumHeader = document.querySelector('.header__cart-button');
-const emptyTemplate = document.querySelector('#cart-empty-template');
 
 export function renderCart() {
   cartItemsContainer.innerHTML = '';
@@ -14,8 +19,7 @@ export function renderCart() {
   const items = Object.values(cart);
 
   if (items.length === 0) {
-    const clone = emptyTemplate.content.cloneNode(true);
-    cartItemsContainer.appendChild(clone);
+    stateMessage(cartItemsContainer, messages.emptyCart);
   } else {
     items.forEach((item) => {
       CartItemsRender(item);

@@ -64,6 +64,7 @@
 
   &__clear-button {
     @include reset-button;
+    @include hover-opacity;
 
     font-family: $font-family-base;
     font-size: $font-14;
@@ -71,8 +72,6 @@
     line-height: 112%;
     color: $color-black;
     opacity: 0.4;
-
-    @include hover-opacity;
   }
 }
 
@@ -234,10 +233,4 @@
   background-color: $color-mint;
   border: none;
   border-radius: 4px;
-}
-
-.cart__empty-message {
-  font-size: $font-14;
-  text-transform: uppercase;
-  opacity: 0.4;
 }

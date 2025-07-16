@@ -6,3 +6,4 @@ export {
   applySorting,
   renderFilteredCards,
 } from './filters-and-sorting';
+export { stateMessage } from './state-message';
