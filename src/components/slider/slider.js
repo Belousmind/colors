@@ -1,10 +1,10 @@
 const slidesData = [
-  '/slide.webp',
-  '/slide.webp',
-  '/slide.webp',
-  '/slide.webp',
-  '/slide.webp',
-  '/slide.webp',
+  'slide.webp',
+  'slide.webp',
+  'slide.webp',
+  'slide.webp',
+  'slide.webp',
+  'slide.webp',
 ];
 
 const sliderContainer = document.getElementById('sliderContainer');
