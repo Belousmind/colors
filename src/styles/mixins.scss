@@ -24,3 +24,11 @@
   color: $color-dark;
   font-size: $spacing-12;
 }
+
+@mixin hover-opacity($opacity: 0.8) {
+  @media (hover: hover) {
+    &:hover {
+      opacity: $opacity;
+    }
+  }
+}

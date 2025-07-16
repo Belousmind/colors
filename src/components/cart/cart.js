@@ -1,6 +1,7 @@
 import { updateCartItem, clearCart } from "../../store/cart-store";
 import { renderCart } from "./cart-render";
 import { openModal, closeModal } from "../modal/modal";
+import { menuIsOpen, closeMenu } from "../header/header";
 
 export const cartItemsContainer = document.querySelector(".cart__items");
 const cartItemTemplate = document.querySelector("#cart-item-template");
@@ -59,6 +60,9 @@ const cartMenu = document.querySelector(".cart");
 const cartCloseButton = document.querySelector(".cart__close-button");
 
 cartButton.addEventListener("click", () => {
+  if (menuIsOpen()) {
+    closeMenu();
+  }
   openModal(cartMenu);
 });
 

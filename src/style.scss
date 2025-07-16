@@ -34,6 +34,11 @@ button {
   cursor: pointer;
 }
 
+button img,
+button svg {
+  pointer-events: none;
+}
+
 a {
   text-decoration: none;
 }
