@@ -1,27 +1,25 @@
-@use "../../styles/mixins.scss" as *;
-@use "../../styles/variables.scss" as *;
+@use '../../styles/mixins.scss' as *;
+@use '../../styles/variables.scss' as *;
 
 .header {
-  box-sizing: border-box;
   @include flex-center-between;
 
-  padding: $spacing-20 0;
-
+  box-sizing: border-box;
   width: calc(100% - clamp(24px, 5.33vw, 64px) * 2);
+  padding: $spacing-20 0;
   margin: 0 clamp(24px, 5.33vw, 64px);
   background-color: $color-white;
-  border-bottom: 1px solid rgba(31, 32, 32, 0.06);
+  border-bottom: 1px solid rgb(31 32 32 / 6%);
 
-  @media screen and (min-width: 1200px) {
-    padding: 0 clamp(24px, 5.33vw, 64px);
-    border-bottom: none;
-    max-width: $max-container-width;
-    width: 100%;
-
-    margin: 0;
+  @media screen and (width >= 1200px) {
     display: grid;
     grid-template-columns: auto minmax(12px, 9.6%) 1fr 24px auto;
     justify-content: flex-start;
+    width: 100%;
+    max-width: $max-container-width;
+    padding: 0 clamp(24px, 5.33vw, 64px);
+    margin: 0;
+    border-bottom: none;
   }
 }
 
@@ -31,15 +29,15 @@
 }
 
 .header__burger-button {
+  @include flex-column;
+  @include reset-button;
+  @include hover-opacity;
+
   position: relative;
+  z-index: 15;
+  justify-content: space-between;
   width: 24px;
   height: 18px;
-  @include flex-column;
-  justify-content: space-between;
-  z-index: 15;
-  @include reset-button;
-
-  @include hover-opacity;
 
   .header__burger-line {
     position: absolute;
@@ -47,7 +45,9 @@
     width: 100%;
     height: 2px;
     background-color: $color-dark;
-    transition: transform 0.3s ease, opacity 0.2s ease;
+    transition:
+      transform 0.3s ease,
+      opacity 0.2s ease;
   }
 
   .header__burger-line:nth-child(1) {
@@ -65,8 +65,8 @@
 
   &.open {
     .header__burger-line:nth-child(1) {
-      transform: rotate(45deg);
       top: 50%;
+      transform: rotate(45deg);
     }
 
     .header__burger-line:nth-child(2) {
@@ -74,161 +74,150 @@
     }
 
     .header__burger-line:nth-child(3) {
-      transform: rotate(-45deg);
-      bottom: auto;
       top: 50%;
+      bottom: auto;
+      transform: rotate(-45deg);
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (width >= 1200px) {
     display: none;
   }
 }
 
 .header__menu {
-  box-sizing: border-box;
   @include flex-column;
-  gap: 24px;
 
   position: fixed;
   top: 65px;
   left: -100%;
-
+  z-index: 100;
+  box-sizing: border-box;
+  gap: 24px;
   width: 100%;
   height: 100vh;
-
   padding: 24px clamp(24px, 5.33vw, 64px);
-  background-color: $color-white;
-  z-index: 100;
   overflow-y: auto;
-
-  opacity: 0;
   pointer-events: none;
-  transition: left 0.3s ease, opacity 0.3s ease;
+  background-color: $color-white;
+  opacity: 0;
+  transition:
+    left 0.3s ease,
+    opacity 0.3s ease;
 
   &.open {
     left: 0;
-    opacity: 1;
     pointer-events: auto;
+    opacity: 1;
   }
 
-  @media screen and (min-width: 1200px) {
-    grid-column: 3;
-
-    z-index: 0;
+  @media screen and (width >= 1200px) {
     position: static;
-    transform: none;
-    opacity: 1;
-    pointer-events: auto;
-
+    z-index: 0;
     display: grid;
-
     grid-template-columns:
       auto
       minmax(12px, 36.36%)
       auto
       minmax(12px, 8.05%)
       auto;
-
-    align-items: center;
-
-    padding: 0;
+    grid-column: 3;
     gap: 0;
+    align-items: center;
     height: auto;
+    padding: 0;
+    pointer-events: auto;
+    opacity: 1;
+    transform: none;
   }
 }
 
 .header__nav-list {
-  list-style: none;
   @include flex-column;
-  gap: $spacing-12;
-  margin: 0;
-  padding: 0;
 
-  @media screen and (min-width: 1200px) {
+  gap: $spacing-12;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media screen and (width >= 1200px) {
     flex-direction: row;
-    justify-content: space-between;
     gap: clamp($spacing-8, 1.25vw, $spacing-24);
+    justify-content: space-between;
   }
 }
 
 .header__nav-link {
+  @include hover-opacity;
+
   display: inline-block;
-  text-transform: uppercase;
-  color: $color-dark;
   padding: 0;
   font-size: $font-14;
+  color: $color-dark;
+  text-transform: uppercase;
   letter-spacing: 0.84px;
   white-space: nowrap;
-
   transition: opacity 0.15s ease-out;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (width >= 1200px) {
     padding: $spacing-45 0;
   }
-
-  @include hover-opacity;
 }
 
 .header__contacts {
   @include flex-column;
-  align-items: flex-start;
+
   gap: 4px;
-  @media screen and (min-width: 1200px) {
+  align-items: flex-start;
+  @media screen and (width >= 1200px) {
     grid-column: 3;
   }
 }
 
 .header__phone {
+  @include hover-opacity;
+
+  font-size: $font-16;
+  font-weight: 500;
   color: $color-dark;
   letter-spacing: -0.32px;
-  font-size: $font-16;
-
-  font-weight: 500;
   white-space: nowrap;
-
-  @include hover-opacity;
 }
 
 .header__callback-button {
-  color: $color-dark;
-  opacity: 0.3;
-
-  font-family: $font-family-base;
-
   @include reset-button;
   @include hover-opacity(0.8);
+
+  font-family: $font-family-base;
+  color: $color-dark;
+  opacity: 0.3;
 }
 
 .header__actions {
   display: flex;
   gap: $spacing-24;
-  @media screen and (min-width: 1200px) {
+  @media screen and (width >= 1200px) {
     grid-column: 5;
   }
 }
 
 .header__action-button {
   @include grid-center;
-
-  border-radius: 50%;
-
   @include reset-button;
   @include hover-opacity(0.4);
+
+  border-radius: 50%;
 }
 
 .header__cart-button {
-  grid-column: 5;
+  @include grid-center;
+  @include hover-opacity;
 
+  grid-column: 5;
   min-width: 24px;
   min-height: 24px;
-  @include grid-center;
-  border-radius: 999px;
-
-  background-color: $color-mint;
   color: $color-dark;
-
+  background-color: $color-mint;
   border: none;
-
-  @include hover-opacity;
+  border-radius: 999px;
 }

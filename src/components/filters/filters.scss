@@ -1,10 +1,10 @@
-@use "../../styles/mixins.scss" as *;
-@use "../../styles/variables.scss" as *;
+@use '../../styles/mixins.scss' as *;
+@use '../../styles/variables.scss' as *;
 
 .toggle {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  @include flex-center;
+
+  gap: $spacing-12;
   cursor: pointer;
 
   &__input {
@@ -12,23 +12,25 @@
   }
 
   &__slider {
+    position: relative;
     width: 36px;
     height: 22px;
     background-color: $color-light-grey;
     border-radius: 12px;
-    position: relative;
     transition: background-color 0.3s;
 
     &::before {
-      content: "";
       position: absolute;
-      width: 8px;
-      height: 8px;
       top: 7px;
       left: 7px;
+      width: 8px;
+      height: 8px;
+      content: '';
       background-color: $color-dark;
       border-radius: 50%;
-      transition: transform 0.3s, background-color 0.3s;
+      transition:
+        transform 0.3s,
+        background-color 0.3s;
     }
   }
 
@@ -42,62 +44,59 @@
 
   &__label {
     @include button-text(400);
-
     @include hover-opacity(0.4);
   }
 }
 
 .catalog__filters-button {
   @include reset-button;
-
   @include button-text(500);
 
-  @media screen and (min-width: 768px) {
+  @media screen and (width >= 768px) {
     display: none;
   }
 }
 
 .catalog__filters-panel {
-  box-sizing: border-box;
-  width: 100%;
-  left: 0;
-  right: 0;
   position: fixed;
+  right: 0;
   bottom: -100%;
-  background-color: $color-white;
+  left: 0;
   z-index: 10;
-
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-
   gap: 10px;
-  padding: 54px 24px 114px 24px;
-  border-radius: 24px 24px 0px 0px;
+  width: 100%;
+  padding: 54px 24px 114px;
+  background-color: $color-white;
+  border-radius: 24px 24px 0 0;
   transition: bottom 0.2s ease-out;
 
   &::before {
-    content: "";
     position: absolute;
     top: 12px;
     left: 50%;
-    transform: translateX(-50%);
     display: block;
     width: 28px;
     height: 4px;
+    margin: 8px auto 0;
+    content: '';
+    background-color: $color-dark;
     border-radius: 40px;
     opacity: 0.6;
-    background-color: $color-dark;
-    margin: 8px auto 0;
+    transform: translateX(-50%);
   }
 
   &.open {
     bottom: 0;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (width >= 768px) {
     position: static;
-    border-radius: 0;
     padding: 0;
+    border-radius: 0;
+
     &::before {
       display: none;
     }

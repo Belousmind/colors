@@ -1,15 +1,15 @@
-import { cart } from "../../store/cart-store";
-import { getTotalItems, getItemWord, getTotalPrice } from "../../utils";
-import { cartItemsContainer, CartItemsRender } from "./cart";
+import { cart } from '../../store/cart-store';
+import { getTotalItems, getItemWord, getTotalPrice } from '../../utils';
+import { cartItemsContainer, CartItemsRender } from './cart';
 
-const totalCountElement = document.querySelector(".cart__info");
-const totalSumElement = document.querySelector(".cart__total-value");
+const totalCountElement = document.querySelector('.cart__info');
+const totalSumElement = document.querySelector('.cart__total-value');
 
-const totalSumHeader = document.querySelector(".header__cart-button");
-const emptyTemplate = document.querySelector("#cart-empty-template");
+const totalSumHeader = document.querySelector('.header__cart-button');
+const emptyTemplate = document.querySelector('#cart-empty-template');
 
 export function renderCart() {
-  cartItemsContainer.innerHTML = "";
+  cartItemsContainer.innerHTML = '';
 
   const items = Object.values(cart);
 
@@ -27,6 +27,6 @@ export function renderCart() {
   const totalPrice = getTotalPrice(cart);
 
   totalSumHeader.textContent = totalCount;
-  totalSumElement.textContent = `${totalPrice.toLocaleString("ru-RU")} ₽`;
+  totalSumElement.textContent = `${totalPrice.toLocaleString('ru-RU')} ₽`;
   totalCountElement.textContent = `${totalCount} ${word}`;
 }

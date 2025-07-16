@@ -1,4 +1,4 @@
-@use "./variables.scss" as *;
+@use './variables.scss' as *;
 
 @mixin flex-center {
   display: flex;
@@ -22,17 +22,17 @@
 }
 
 @mixin reset-button($padding: 0) {
+  padding: $padding;
   background-color: transparent;
   border: none;
-  padding: $padding;
 }
 
 @mixin button-text($font-weight) {
-  text-transform: uppercase;
-  letter-spacing: 0.72px;
+  font-size: $spacing-12;
   font-weight: $font-weight;
   color: $color-dark;
-  font-size: $spacing-12;
+  text-transform: uppercase;
+  letter-spacing: 0.72px;
 }
 
 @mixin hover-opacity($opacity: 0.8) {
@@ -47,9 +47,8 @@
 
 @mixin icon-button($size: 24px, $opacity) {
   @include reset-button;
+  @include hover-opacity($opacity);
 
   width: $size;
   height: $size;
-
-  @include hover-opacity($opacity);
 }

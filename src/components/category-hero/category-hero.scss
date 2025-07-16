@@ -1,52 +1,51 @@
-@use "../../styles/mixins.scss" as *;
-@use "../../styles/variables.scss" as *;
+@use '../../styles/mixins.scss' as *;
+@use '../../styles/variables.scss' as *;
 
 .category-hero {
+  padding: 0 clamp(24px, 5.33vw, 64px);
   margin-top: $spacing-16;
   margin-bottom: clamp(48px, 6vw, 72px);
-  padding: 0 clamp(24px, 5.33vw, 64px);
 
-  @media screen and (min-width: 768px) {
-    margin-top: 0;
+  @media screen and (width >= 768px) {
     position: relative;
-    height: 560px;
-    max-width: $max-container-width;
     width: 100%;
+    max-width: $max-container-width;
+    height: 560px;
     padding: 0;
+    margin-top: 0;
   }
 }
 
 .category-hero__text {
   color: $color-dark;
-  @media screen and (min-width: 768px) {
+  @media screen and (width >= 768px) {
     position: absolute;
-    z-index: 5;
     inset: 0;
-    margin-top: 214px;
-    @include flex-column;
-
-    align-items: center;
+    z-index: 5;
     gap: $spacing-24;
+    align-items: center;
+    margin-top: 214px;
     color: $color-white;
+    @include flex-column;
   }
 }
 
 .category-hero__title {
+  margin: 0;
   font-size: clamp(36px, 6vw, 72px);
   line-height: 88%;
   letter-spacing: -1.44px;
-  margin: 0;
 }
 
 .category-hero__description {
   display: none;
-  @media screen and (min-width: 768px) {
+  @media screen and (width >= 768px) {
     display: block;
     margin: 0;
-    text-align: center;
     font-size: $font-16;
     font-weight: 500;
     line-height: 130%;
+    text-align: center;
     letter-spacing: 0.32px;
   }
 }

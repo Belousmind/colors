@@ -1,9 +1,8 @@
-$color-black: #000000;
+$color-black: #000;
 $color-dark: #1f2020;
-$color-white: #ffffff;
+$color-white: #fff;
 $color-mint: #7bb899;
 $color-light-grey: #f2f2f2;
-
 $font-10: 0.625rem;
 $font-12: 0.75rem;
 $font-14: 0.875rem;
@@ -12,9 +11,7 @@ $font-24: 1.5rem;
 $font-30: 1.875rem;
 $font-36: 2.25rem;
 $font-72: 4.5rem;
-
-$font-family-base: "Inter", sans-serif;
-
+$font-family-base: 'Inter', sans-serif;
 $spacing-4: 4px;
 $spacing-6: 6px;
 $spacing-8: 8px;
@@ -28,5 +25,4 @@ $spacing-20: 20px;
 $spacing-22: 22px;
 $spacing-24: 24px;
 $spacing-45: 45px;
-
 $max-container-width: 1920px;

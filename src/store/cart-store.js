@@ -22,12 +22,12 @@ export function updateCartItem(id, action) {
   if (!item) return;
 
   switch (action) {
-    case "increase":
+    case 'increase':
       item.quantity += 1;
       item.removed = false;
       break;
 
-    case "decrease":
+    case 'decrease':
       if (item.quantity > 1) {
         item.quantity -= 1;
       } else {
@@ -35,11 +35,11 @@ export function updateCartItem(id, action) {
       }
       break;
 
-    case "remove":
+    case 'remove':
       item.removed = true;
       break;
 
-    case "restore":
+    case 'restore':
       item.removed = false;
       break;
 

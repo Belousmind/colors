@@ -1,5 +1,5 @@
-@use "../../styles/mixins.scss" as *;
-@use "../../styles/variables.scss" as *;
+@use '../../styles/mixins.scss' as *;
+@use '../../styles/variables.scss' as *;
 
 .catalog__sort {
   position: relative;
@@ -8,32 +8,31 @@
 .catalog__sort-list {
   @include flex-column;
 
-  width: 280px;
-
-  opacity: 0;
-  pointer-events: none;
-
-  visibility: hidden;
   position: absolute;
   top: 0;
   right: 0;
-  background-color: $color-white;
   z-index: 15;
+  visibility: hidden;
+  width: 280px;
+  pointer-events: none;
+  background-color: $color-white;
+  opacity: 0;
   transition: opacity 0.2s ease-out;
+
   &.open {
-    opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    opacity: 1;
   }
 }
 
 .catalog__sort-option {
   @include button-text(500);
-  white-space: nowrap;
-
   @include reset-button(17px 0 24px 16px);
 
   display: flex;
+  white-space: nowrap;
+
   &.selected {
     background-color: $color-mint;
   }
@@ -42,6 +41,7 @@
 .catalog__sort-toggle {
   @include flex-center-between;
   @include reset-button;
+
   gap: $spacing-4;
 }
 

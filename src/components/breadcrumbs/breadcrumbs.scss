@@ -1,15 +1,35 @@
-@use "../../styles/mixins.scss" as *;
-@use "../../styles/variables.scss" as *;
+@use '../../styles/mixins.scss' as *;
+@use '../../styles/variables.scss' as *;
 
 .breadcrumbs {
   display: flex;
   margin-bottom: 48px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (width >= 768px) {
     position: absolute;
     top: 32px;
     left: clamp(24px, 5.33vw, 64px);
     z-index: 7;
+  }
+}
+
+.breadcrumbs__link {
+  margin-right: $spacing-8;
+  font-size: $font-10;
+  color: $color-dark;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.breadcrumbs__separator {
+  width: 3px;
+  height: 3px;
+  margin-right: $spacing-8;
+  background-color: $color-dark;
+  border-radius: 50%;
+
+  @media screen and (width >= 768px) {
+    background-color: $color-white;
   }
 }
 
@@ -28,7 +48,7 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (width >= 768px) {
     .breadcrumbs__link {
       color: $color-white;
     }
@@ -36,25 +56,5 @@
     .breadcrumbs__separator {
       background-color: $color-white;
     }
-  }
-}
-
-.breadcrumbs__link {
-  margin-right: $spacing-8;
-  color: $color-dark;
-  font-size: $font-10;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-}
-
-.breadcrumbs__separator {
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background-color: $color-dark;
-  margin-right: $spacing-8;
-
-  @media screen and (min-width: 768px) {
-    background-color: $color-white;
   }
 }

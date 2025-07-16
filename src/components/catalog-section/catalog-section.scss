@@ -1,17 +1,16 @@
-@use "../../styles/mixins.scss" as *;
-@use "../../styles/variables.scss" as *;
+@use '../../styles/mixins.scss' as *;
+@use '../../styles/variables.scss' as *;
 
 .catalog {
-  display: grid;
-  margin: 0 auto;
-  width: 100%;
   box-sizing: border-box;
-  grid-template-columns: 1fr 1fr;
+  display: grid;
   grid-template-rows: 15px auto;
-
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
   padding: 0 clamp(24px, 5.33vw, 64px);
+  margin: 0 auto;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (width >= 768px) {
     grid-template-columns: auto minmax(15px, clamp(15px, 11.5vw, 138px)) 1fr 1fr;
     row-gap: 44px;
   }
@@ -19,7 +18,7 @@
 
 .catalog__filters-panel {
   grid-column: 1;
-  @media screen and (min-width: 768px) {
+  @media screen and (width >= 768px) {
     grid-row: span 2;
   }
 }
@@ -28,7 +27,7 @@
   grid-row: 2;
   grid-column: span 2;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (width >= 768px) {
     grid-row: 2;
     grid-column: span 3 / 6;
   }
@@ -36,17 +35,18 @@
 
 .catalog__count {
   @include button-text(500);
+
   display: none;
 
-  @media screen and (min-width: 768px) {
-    grid-column: 3;
+  @media screen and (width >= 768px) {
     display: block;
+    grid-column: 3;
   }
 }
+
 .catalog__sort {
-  justify-self: flex-end;
-  align-self: flex-end;
-  @media screen and (min-width: 768px) {
+  place-self: flex-end flex-end;
+  @media screen and (width >= 768px) {
     grid-column: 4;
   }
 }
