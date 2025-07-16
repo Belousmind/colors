@@ -3,8 +3,6 @@
 
 .product-list {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   gap: clamp($spacing-15, 1.5vw, $spacing-18);
   margin-bottom: clamp(64px, 11.75vw, 141px);

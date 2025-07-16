@@ -1,5 +1,4 @@
-import colors from "../../../colors.json";
-
+import { colorsStore } from "../../store/data-store";
 import { setFilters } from "../../store/catalog-store";
 import { renderFilteredCards } from "../../utils/filters-and-sorting";
 import { openModal } from "../modal/modal";
@@ -30,7 +29,7 @@ Object.entries(filters).forEach(([filterKey, labelText]) => {
       .map((el) => el.dataset.filter);
 
     setFilters(activeFilters);
-    renderFilteredCards(colors);
+    renderFilteredCards(colorsStore.get());
   });
 
   toggleContainer.append(clone);

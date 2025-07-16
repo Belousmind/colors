@@ -1,8 +1,7 @@
+import { colorsStore } from "../../store/data-store";
 import { setSort } from "../../store/catalog-store";
 import { renderFilteredCards } from "../../utils/filters-and-sorting";
 import { openModal, closeModal } from "../modal/modal";
-
-import colors from "../../../colors.json";
 
 const sortContainer = document.querySelector(".catalog__sort-list");
 const sortLabel = document.querySelector(".catalog__sort-label");
@@ -26,7 +25,9 @@ Object.entries(sortingOptions).forEach(([key, label], index) => {
     button.classList.add("selected");
     setSort(key);
     sortLabel.textContent = label;
-    renderFilteredCards(colors);
+
+    const colors = colorsStore.get();
+    if (colors) renderFilteredCards(colors);
   }
 
   sortContainer.appendChild(button);
@@ -51,7 +52,8 @@ sortContainer.addEventListener("click", (event) => {
 
     sortLabel.textContent = target.textContent;
 
-    renderFilteredCards(colors);
+    const colors = colorsStore.get();
+    if (colors) renderFilteredCards(colors);
     closeModal();
   }
 });

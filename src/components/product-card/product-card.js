@@ -1,4 +1,4 @@
-import colors from "../../../colors.json";
+import { colorsStore } from "../../store/data-store";
 import { addToCart } from "../../store/cart-store";
 import { renderCart } from "../cart/cart-render";
 
@@ -31,7 +31,8 @@ cardsContainer.addEventListener("click", (event) => {
 
   if (target.classList.contains("product-card__button")) {
     const id = Number(target.dataset.id);
-    const good = colors.find((color) => color.id === id);
+
+    const good = colorsStore.get().find((color) => color.id === id);
 
     if (good) {
       addToCart(good);

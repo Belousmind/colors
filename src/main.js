@@ -3,12 +3,29 @@ import "./components/header/header";
 import "./components/filters/filters";
 import "./components/sorting/sorting";
 import "./components/slider/slider";
-import './components/breadcrumbs/breadcrumbs'
-
-import colors from "../colors.json";
+import "./components/breadcrumbs/breadcrumbs";
 
 import { CardsRender } from "./components/product-card/product-card";
 
-CardsRender(colors);
+import { loadData } from "./api/load-data";
+import { colorsStore } from "./store/data-store";
 
-// console.log(window.innerWidth)
+const BASE_URL = "https://api.jsonbin.io/v3/b/6873eecc6063391d31acdc2c";
+const API_KEY = "";
+
+document.addEventListener("DOMContentLoaded", () => {
+  // initApp();
+});
+
+async function initApp() {
+  const colorsData = await loadData(BASE_URL, {
+    headers: { "X-Master-Key": API_KEY },
+  });
+
+  if (colorsData?.data?.record) {
+    colorsStore.set(colorsData.data.record);
+    CardsRender(colorsStore.get());
+  } else {
+    console.error("Данные не получены");
+  }
+}

@@ -1,10 +1,10 @@
 const slidesData = [
-  "/slide.png",
-  "/slide.png",
-  "/slide.png",
-  "/slide.png",
-  "/slide.png",
-  "/slide.png",
+  "/slide.webp",
+  "/slide.webp",
+  "/slide.webp",
+  "/slide.webp",
+  "/slide.webp",
+  "/slide.webp",
 ];
 
 const sliderContainer = document.getElementById("sliderContainer");
@@ -17,6 +17,7 @@ slidesData.forEach((src, index) => {
   const slideClone = slideTemplate.content.cloneNode(true);
   const slideImg = slideClone.querySelector("img");
   slideImg.src = src;
+  slideImg.alt = "slide";
   sliderContainer.appendChild(slideClone);
 
   const dotClone = dotTemplate.content.cloneNode(true);
