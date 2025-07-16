@@ -67,21 +67,19 @@
           </button>
         </div>
 
-        <div class="cart__body">
-          <div class="cart__top">
-            <span class="cart__info"></span>
-            <button class="cart__clear-button">очистить список</button>
-          </div>
+        <div class="cart__top">
+          <span class="cart__info">0 товаров</span>
+          <button class="cart__clear-button">очистить список</button>
+        </div>
 
-          <div class="cart__items"></div>
+        <div class="cart__items"></div>
 
-          <div class="cart__bottom">
-            <span class="cart__total">
-              Итого
-              <span class="cart__total-value"></span>
-            </span>
-            <button class="cart__submit-button">Оформить заказ</button>
-          </div>
+        <div class="cart__bottom">
+          <span class="cart__total">
+            Итого
+            <span class="cart__total-value">0 ₽</span>
+          </span>
+          <button class="cart__submit-button">Оформить заказ</button>
         </div>
       </div>
       <section class="category-hero">
@@ -160,9 +158,48 @@
         <span class="cart__item-price"></span>
       </div>
       <div class="cart__item-quantity">
-        <button class="cart__quantity-button" data-action="decrease">-</button>
+        <button class="cart__quantity-button" data-action="decrease">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M3.3335 8H12.6668"
+              stroke="black"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
         <span class="cart__quantity-value"></span>
-        <button class="cart__quantity-button" data-action="increase">+</button>
+        <button class="cart__quantity-button" data-action="increase">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M8 3.33325V12.6666"
+              stroke="black"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3.3335 8H12.6668"
+              stroke="black"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
       </div>
       <button class="cart__remove-button" data-action="remove">
         <img src="/icons/cross.svg" alt="cross icon" />

@@ -11,9 +11,18 @@ export function CartItemsRender({ good, quantity, removed }) {
 
   const item = cartItemTemplate.content.cloneNode(true);
 
+  const restoreButton = item.querySelector(".cart__restore-button");
+  const removeButton = item.querySelector(".cart__remove-button");
+
   if (removed) {
     const card = item.querySelector(".cart__item");
     card.classList.add("removed");
+
+    restoreButton.style.display = "block";
+    removeButton.style.display = "none";
+  } else {
+    restoreButton.style.display = "none";
+    removeButton.style.display = "block";
   }
 
   const img = item.querySelector(".cart__item-image");

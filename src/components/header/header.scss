@@ -33,7 +33,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 150;
+  z-index: 15;
   @include reset-button;
 
   @include hover-opacity;
