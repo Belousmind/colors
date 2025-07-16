@@ -12,8 +12,7 @@
   position: relative;
   cursor: pointer;
 
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
 
   color: $color-dark;
   font-size: $font-16;
@@ -33,9 +32,7 @@
   width: clamp(156px, 25vw, 278px);
   height: clamp(156px, 25vw, 278px);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include grid-center;
   margin-bottom: $spacing-16;
 }
 
@@ -54,9 +51,8 @@
 }
 
 .product-card__footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex-center-between;
+
   margin-bottom: $spacing-22;
 }
 
@@ -66,8 +62,7 @@
 }
 
 .product-card__button {
-  display: flex;
-  align-items: center;
+  @include flex-center;
   justify-content: center;
 
   padding: $spacing-4 $spacing-12;
@@ -82,7 +77,7 @@
     right: 0;
     bottom: $spacing-14;
     background-color: $color-mint;
-    padding: 6px 0px;
+    padding: $spacing-6 0px;
     width: 80px;
   }
 }

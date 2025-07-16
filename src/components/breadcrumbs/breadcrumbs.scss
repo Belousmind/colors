@@ -14,8 +14,8 @@
 }
 
 .breadcrumbs__item {
-  display: flex;
-  align-items: center;
+  @include flex-center;
+
   opacity: 0.3;
 
   &:last-child {

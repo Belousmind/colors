@@ -1,0 +1,52 @@
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/variables.scss" as *;
+
+.catalog {
+  display: grid;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 15px auto;
+
+  padding: 0 clamp(24px, 5.33vw, 64px);
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: auto minmax(15px, clamp(15px, 11.5vw, 138px)) 1fr 1fr;
+    row-gap: 44px;
+  }
+}
+
+.catalog__filters-panel {
+  grid-column: 1;
+  @media screen and (min-width: 768px) {
+    grid-row: span 2;
+  }
+}
+
+.product-list {
+  grid-row: 2;
+  grid-column: span 2;
+
+  @media screen and (min-width: 768px) {
+    grid-row: 2;
+    grid-column: span 3 / 6;
+  }
+}
+
+.catalog__count {
+  @include button-text(500);
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 3;
+    display: block;
+  }
+}
+.catalog__sort {
+  justify-self: flex-end;
+  align-self: flex-end;
+  @media screen and (min-width: 768px) {
+    grid-column: 4;
+  }
+}

@@ -6,9 +6,8 @@
 }
 
 .catalog__sort-list {
-  display: flex;
+  @include flex-column;
 
-  flex-direction: column;
   width: 280px;
 
   opacity: 0;

@@ -5,7 +5,7 @@
   box-sizing: border-box;
   @include flex-center-between;
 
-  padding: 20px 0;
+  padding: $spacing-20 0;
 
   width: calc(100% - clamp(24px, 5.33vw, 64px) * 2);
   margin: 0 clamp(24px, 5.33vw, 64px);
@@ -15,7 +15,7 @@
   @media screen and (min-width: 1200px) {
     padding: 0 clamp(24px, 5.33vw, 64px);
     border-bottom: none;
-    max-width: 1920px;
+    max-width: $max-container-width;
     width: 100%;
 
     margin: 0;
@@ -34,8 +34,7 @@
   position: relative;
   width: 24px;
   height: 18px;
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   justify-content: space-between;
   z-index: 15;
   @include reset-button;
@@ -88,8 +87,7 @@
 
 .header__menu {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   gap: 24px;
 
   position: fixed;
@@ -103,13 +101,12 @@
   background-color: $color-white;
   z-index: 100;
   overflow-y: auto;
-  
+
   opacity: 0;
   pointer-events: none;
   transition: left 0.3s ease, opacity 0.3s ease;
 
   &.open {
-   
     left: 0;
     opacity: 1;
     pointer-events: auto;
@@ -143,8 +140,7 @@
 
 .header__nav-list {
   list-style: none;
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   gap: $spacing-12;
   margin: 0;
   padding: 0;
@@ -175,8 +171,7 @@
 }
 
 .header__contacts {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   align-items: flex-start;
   gap: 4px;
   @media screen and (min-width: 1200px) {
@@ -198,12 +193,10 @@
 .header__callback-button {
   color: $color-dark;
   opacity: 0.3;
-  border: none;
-  background-color: transparent;
-  font-family: $font-family-base;
-  padding: 0;
 
-  transition: 0.2s ease-out;
+  font-family: $font-family-base;
+
+  @include reset-button;
   @include hover-opacity(0.8);
 }
 
@@ -216,11 +209,9 @@
 }
 
 .header__action-button {
-  display: grid;
-  place-items: center;
+  @include grid-center;
 
   border-radius: 50%;
-  transition: 0.2s ease-out;
 
   @include reset-button;
   @include hover-opacity(0.4);

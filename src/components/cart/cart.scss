@@ -150,8 +150,7 @@
 }
 
 .cart__item-details {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   align-items: flex-start;
   gap: clamp($spacing-4, 1.33vw, $spacing-16);
   font-size: $font-16;
@@ -169,8 +168,7 @@
 }
 
 .cart__item-quantity {
-  display: flex;
-  align-items: center;
+  @include flex-center;
 
   grid-column: 2;
   grid-row: 2;
@@ -198,17 +196,12 @@
 
 .cart__restore-button,
 .cart__remove-button {
-  border: none;
-  background-color: transparent;
-  width: 24px;
-  height: 24px;
-  padding: 0;
+  @include icon-button(24px, 0.8);
+
   margin-left: clamp(12px, 3.08vw, 37px);
 
   grid-row: span 2;
   grid-column: 3;
-
-  @include hover-opacity(0.8);
 
   @media screen and (min-width: 500px) {
     grid-row: 1;
@@ -226,10 +219,11 @@
 }
 
 .cart__total {
-  font-size: $font-16;
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
+
   align-items: flex-start;
+  font-size: $font-16;
+
   .cart__total-value {
     font-size: clamp($font-24, 2.5vw, $font-30);
   }
@@ -237,14 +231,13 @@
 
 .cart__submit-button {
   @include grid-center;
+  @include button-text(500);
 
   background-color: $color-mint;
   border: none;
 
   padding: 21px 58px;
   border-radius: 4px;
-
-  @include button-text(500);
 }
 
 .cart__empty-message {

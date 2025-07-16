@@ -87,23 +87,21 @@
         </div>
       </div>
       <section class="category-hero">
-        <!-- slider -->
-        <div class="category-hero__slider-wrapper">
-          <div class="category-hero__slider" id="sliderContainer"></div>
+        <div class="slider__wrapper">
+          <div class="slider__track" id="sliderContainer"></div>
         </div>
 
-        <div class="category-hero__controls">
-          <button class="category-hero__nav category-hero__nav--prev">
+        <div class="slider__controls">
+          <button class="slider__nav slider__nav--prev">
             <img src="/icons/chevron-icon.svg" alt="" />
           </button>
-          <button class="category-hero__nav category-hero__nav--next">
+          <button class="slider__nav slider__nav--next">
             <img src="/icons/chevron-icon.svg" alt="" />
           </button>
-          <nav class="category-hero__pagination">
-            <ul class="category-hero__dots" id="dotsContainer"></ul>
+          <nav class="slider__pagination">
+            <ul class="slider__dots" id="dotsContainer"></ul>
           </nav>
         </div>
-        <!-- slider -->
 
         <div class="breadcrumbs"></div>
 
@@ -155,11 +153,11 @@
   </template>
 
   <template id="slide-template">
-    <img class="category-hero__slide-image" src="" alt="" loading="lazy" />
+    <img class="slider__slide-image" src="" alt="" loading="lazy" />
   </template>
 
   <template id="dot-template">
-    <li class="category-hero__dot"></li>
+    <li class="slider__dot"></li>
   </template>
 
   <template id="toggle-template">

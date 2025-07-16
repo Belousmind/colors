@@ -9,7 +9,9 @@
 @use "./components/modal/modal.scss";
 
 @use "./components/slider/slider.scss";
-@use "./components/breadcrumbs//breadcrumbs.scss";
+@use "./components/breadcrumbs/breadcrumbs.scss";
+@use "./components/catalog-section/catalog-section.scss";
+@use "./components/category-hero/category-hero.scss";
 
 body,
 *::before,
@@ -29,13 +31,12 @@ body {
     overflow: hidden;
   }
 
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   align-items: center;
 }
 
 main {
-  max-width: 1920px;
+  max-width: $max-container-width;
   width: 100%;
   flex: 1;
   min-height: 100vh;
@@ -59,108 +60,4 @@ footer {
   background-color: $color-black;
   width: 100%;
   height: clamp(202px, 25vw, 310px);
-}
-
-// грид сетка для секшона
-
-.catalog {
-  display: grid;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 15px auto;
-
-  padding: 0 clamp(24px, 5.33vw, 64px);
-
-  @media screen and (min-width: 768px) {
-    grid-template-columns: auto minmax(15px, clamp(15px, 11.5vw, 138px)) 1fr 1fr;
-    row-gap: 44px;
-  }
-}
-
-.catalog__filters-panel {
-  grid-column: 1;
-  @media screen and (min-width: 768px) {
-    grid-row: span 2;
-  }
-}
-
-.product-list {
-  grid-row: 2;
-  grid-column: span 2;
-
-  @media screen and (min-width: 768px) {
-    grid-row: 2;
-    grid-column: span 3 / 6;
-  }
-}
-
-.catalog__count {
-  @include button-text(500);
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    grid-column: 3;
-    display: block;
-  }
-}
-.catalog__sort {
-  justify-self: flex-end;
-  align-self: flex-end;
-  @media screen and (min-width: 768px) {
-    grid-column: 4;
-  }
-}
-
-// hero
-
-.category-hero {
-  margin-top: $spacing-16;
-  margin-bottom: clamp(48px, 6vw, 72px);
-  padding: 0 clamp(24px, 5.33vw, 64px);
-
-  @media screen and (min-width: 768px) {
-    margin-top: 0;
-    position: relative;
-    height: 560px;
-    max-width: 1920px;
-    width: 100%;
-    padding: 0;
-  }
-}
-
-.category-hero__text {
-  color: $color-dark;
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    z-index: 5;
-    inset: 0;
-    margin-top: 214px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    color: $color-white;
-  }
-}
-
-.category-hero__title {
-  font-size: clamp(36px, 6vw, 72px);
-  line-height: 88%;
-  letter-spacing: -1.44px;
-  margin: 0;
-}
-
-.category-hero__description {
-  display: none;
-  @media screen and (min-width: 768px) {
-    display: block;
-    margin: 0;
-    text-align: center;
-    font-size: $font-16;
-    font-weight: 500;
-    line-height: 130%;
-    letter-spacing: 0.32px;
-  }
 }

@@ -1,5 +1,10 @@
 @use "./variables.scss" as *;
 
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
 @mixin flex-center-between {
   display: flex;
   align-items: center;
@@ -9,6 +14,11 @@
 @mixin grid-center {
   display: grid;
   place-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 @mixin reset-button($padding: 0) {
@@ -33,4 +43,13 @@
       opacity: $opacity;
     }
   }
+}
+
+@mixin icon-button($size: 24px, $opacity) {
+  @include reset-button;
+
+  width: $size;
+  height: $size;
+
+  @include hover-opacity($opacity);
 }
