@@ -72,7 +72,11 @@
           <button class="cart__clear-button">очистить список</button>
         </div>
 
-        <div class="cart__items"></div>
+        <div class="cart__items">
+          <span class="cart__empty-message"
+            >Добавьте товары, и они появятся здесь</span
+          >
+        </div>
 
         <div class="cart__bottom">
           <span class="cart__total">
@@ -117,7 +121,7 @@
           <div class="catalog__filters-panel"></div>
         </div>
 
-        <span class="catalog__count">30 товаров</span>
+        <span class="catalog__count">0 товаров</span>
 
         <div class="catalog__sort">
           <button class="catalog__sort-toggle">
@@ -136,6 +140,12 @@
     <footer></footer>
     <script type="module" src="/src/main.js"></script>
   </body>
+
+  <template id="cart-empty-template">
+    <span class="cart__empty-message"
+      >Добавьте товары, и они появятся здесь</span
+    >
+  </template>
 
   <template id="breadcrumbs-item-template">
     <div class="breadcrumbs__item">

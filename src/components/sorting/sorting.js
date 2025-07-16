@@ -1,5 +1,5 @@
 import { colorsStore, setSort } from "../../store/index";
-import { renderFilteredCards } from "../../utils/filters-and-sorting";
+import { renderFilteredCards } from "../../utils/index";
 import { openModal, closeModal } from "../modal/modal";
 
 const sortContainer = document.querySelector(".catalog__sort-list");

@@ -4,6 +4,7 @@ import {
   cardsContainer,
 } from "../components/product-card/product-card";
 import { getItemWord } from "./get-item-word";
+import { catalogCount } from "../main";
 
 export function applyFilters(data, activeFilters) {
   return data.filter((item) =>
@@ -39,7 +40,6 @@ export function renderFilteredCards(data) {
   if (sortKey) {
     filtered = applySorting(filtered, sortKey);
   }
-  const catalogCount = document.querySelector(".catalog__count");
   catalogCount.textContent = `${filtered.length} ${getItemWord(filtered)}`;
   cardsContainer.innerHTML = "";
   CardsRender(filtered);

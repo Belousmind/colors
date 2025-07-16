@@ -1,3 +1,4 @@
+import { body } from "../../main";
 const modalOverlay = document.querySelector(".modal-overlay");
 
 let currentTarget = null;
@@ -14,7 +15,7 @@ export function openModal(targetContainer) {
 
   currentTarget.classList.add("open");
   modalOverlay.classList.add("visible");
-  document.body.classList.add("no-scroll");
+  body.classList.add("no-scroll");
 }
 
 export function closeModal() {
@@ -22,7 +23,7 @@ export function closeModal() {
 
   currentTarget.classList.remove("open");
   modalOverlay.classList.remove("visible");
-  document.body.classList.remove("no-scroll");
+  body.classList.remove("no-scroll");
 
   currentTarget = null;
 }

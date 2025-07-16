@@ -248,3 +248,9 @@
 
   @include button-text(500);
 }
+
+.cart__empty-message {
+  text-transform: uppercase;
+  font-size: $font-14;
+  opacity: 0.4;
+}

@@ -1,5 +1,5 @@
 import { colorsStore, setFilters } from "../../store/index";
-import { renderFilteredCards } from "../../utils/filters-and-sorting";
+import { renderFilteredCards } from "../../utils/index";
 import { openModal } from "../modal/modal";
 
 const toggleTemplate = document.querySelector("#toggle-template");

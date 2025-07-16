@@ -6,7 +6,7 @@ import "./components/slider/slider";
 import "./components/breadcrumbs/breadcrumbs";
 
 import { CardsRender } from "./components/product-card/product-card";
-
+import { getItemWord } from "./utils/index";
 import { loadData } from "./api/load-data";
 import { colorsStore } from "./store/data-store";
 
@@ -17,13 +17,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // initApp();
 });
 
+export const body = document.querySelector("body");
+export const catalogCount = document.querySelector(".catalog__count");
+
 async function initApp() {
   const colorsData = await loadData(BASE_URL, {
     headers: { "X-Master-Key": API_KEY },
   });
 
   if (colorsData?.data?.record) {
-    colorsStore.set(colorsData.data.record);
+    const colors = colorsData.data.record;
+    colorsStore.set(colors);
+    catalogCount.textContent = `${colors.length} ${getItemWord(colors)}`;
     CardsRender(colorsStore.get());
   } else {
     console.error("Данные не получены");
