@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/colors/favicon.ico" type="image/x-icon" />
+    <title>Colors Store</title>
+    <script type="module" crossorigin src="/colors/assets/index-BbQKW_V8.js"></script>
+    <link rel="stylesheet" crossorigin href="/colors/assets/index-CwKdePht.css">
+  </head>
+  <body>
+    <div class="modal-overlay"></div>
+    <header class="header">
+      <button class="header__burger-button">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+      <img class="header__logo" src="/colors/colors-logo.svg" alt="Logo" />
+
+      <div class="header__menu">
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Продукты</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Цвета</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Вдохновение</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Советы</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Найти магазин</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__contacts">
+          <a class="header__phone" href="tel:+74952217769"
+            >+7 (495) 221-77-69</a
+          >
+          <button class="header__callback-button">Заказать звонок</button>
+        </div>
+
+        <div class="header__actions">
+          <button class="header__action-button">
+            <img src="/colors/icons/search-icon.svg" alt="Search" />
+          </button>
+          <button class="header__action-button">
+            <img src="/colors/icons/profile-icon.svg" alt="Profile" />
+          </button>
+          <button class="header__action-button">
+            <img src="/colors/icons/favorites-icon.svg" alt="Favorites" />
+          </button>
+        </div>
+      </div>
+
+      <button class="header__cart-button">0</button>
+    </header>
+    <main>
+      <div class="cart">
+        <div class="cart__header">
+          <h2 class="cart__title">Корзина</h2>
+          <button class="cart__close-button">
+            <img src="/colors/icons/cross.svg" alt="cross" />
+          </button>
+        </div>
+
+        <div class="cart__top">
+          <span class="cart__info">0 товаров</span>
+          <button class="cart__clear-button">очистить список</button>
+        </div>
+
+        <div class="cart__items">
+          <span class="empty-message"
+            >Добавьте товары, и они появятся здесь</span
+          >
+        </div>
+
+        <div class="cart__bottom">
+          <span class="cart__total">
+            Итого
+            <span class="cart__total-value">0 ₽</span>
+          </span>
+          <button class="cart__submit-button">Оформить заказ</button>
+        </div>
+      </div>
+      <section class="category-hero">
+        <div class="slider__wrapper">
+          <div class="slider__track" id="sliderContainer"></div>
+        </div>
+
+        <div class="slider__controls">
+          <button class="slider__nav slider__nav--prev">
+            <img src="/colors/icons/chevron-icon.svg" alt="" />
+          </button>
+          <button class="slider__nav slider__nav--next">
+            <img src="/colors/icons/chevron-icon.svg" alt="" />
+          </button>
+          <nav class="slider__pagination">
+            <ul class="slider__dots" id="dotsContainer"></ul>
+          </nav>
+        </div>
+
+        <div class="breadcrumbs"></div>
+
+        <div class="category-hero__text">
+          <h1 class="category-hero__title">Краски</h1>
+          <p class="category-hero__description">
+            Идеально подходят для стен и других поверхностей. <br />
+            Найди свой идеальный цвет!
+          </p>
+        </div>
+      </section>
+      <section class="catalog">
+        <div class="catalog__filters">
+          <button class="catalog__filters-button">Фильтры</button>
+          <div class="catalog__filters-panel"></div>
+        </div>
+
+        <span class="catalog__count">0 товаров</span>
+
+        <div class="catalog__sort">
+          <button class="catalog__sort-toggle">
+            <span class="catalog__sort-label"></span>
+            <img
+              class="catalog__sort-icon"
+              src="icons/arrow-down-icon.svg"
+              alt="arrow down"
+            />
+          </button>
+          <div class="catalog__sort-list"></div>
+        </div>
+        <div class="product-list"></div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+
+  <template id="empty-template">
+    <span class="empty-message">Добавьте товары, и они появятся здесь</span>
+  </template>
+
+  <template id="breadcrumbs-item-template">
+    <div class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="#"></a>
+      <div class="breadcrumbs__separator"></div>
+    </div>
+  </template>
+
+  <template id="slide-template">
+    <img class="slider__slide-image" src="" alt="" loading="lazy" />
+  </template>
+
+  <template id="dot-template">
+    <li class="slider__dot"></li>
+  </template>
+
+  <template id="toggle-template">
+    <label class="toggle">
+      <input type="checkbox" class="toggle__input" />
+      <span class="toggle__slider"></span>
+      <span class="toggle__label"></span>
+    </label>
+  </template>
+
+  <template id="cart-item-template">
+    <div class="cart__item">
+      <img class="cart__item-image" src="" alt="Product" />
+      <div class="cart__item-details">
+        <span class="cart__item-title"></span>
+        <span class="cart__item-price"></span>
+      </div>
+      <div class="cart__item-quantity">
+        <button class="cart__quantity-button" data-action="decrease">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M3.3335 8H12.6668"
+              stroke="black"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <span class="cart__quantity-value"></span>
+        <button class="cart__quantity-button" data-action="increase">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M8 3.33325V12.6666"
+              stroke="black"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3.3335 8H12.6668"
+              stroke="black"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <button class="cart__remove-button" data-action="remove">
+        <img src="/colors/icons/cross.svg" alt="cross icon" />
+      </button>
+      <button class="cart__restore-button" data-action="restore">
+        <img src="/colors/icons/restore.svg" alt="restore icon" />
+      </button>
+    </div>
+  </template>
+
+  <template id="product-card-template">
+    <div class="product-card">
+      <div class="product-card__images">
+        <!-- <img
+                class="product-card__image"
+                src="./color.png"
+                alt="Product image"
+              /> -->
+        <img
+          class="product-card__image"
+          src="./Border.png"
+          alt="Border image"
+        />
+      </div>
+
+      <span class="product-card__title"></span>
+      <div class="product-card__footer">
+        <span class="product-card__price"></span>
+        <button class="product-card__button">
+          <img
+            class="product-card__button-icon"
+            src="/colors/icons/plus-icon.svg"
+            alt="plus icon"
+          />
+        </button>
+      </div>
+    </div>
+  </template>
+</html>
