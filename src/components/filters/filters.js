@@ -1,5 +1,4 @@
-import { colorsStore } from "../../store/data-store";
-import { setFilters } from "../../store/catalog-store";
+import { colorsStore, setFilters } from "../../store/index";
 import { renderFilteredCards } from "../../utils/filters-and-sorting";
 import { openModal } from "../modal/modal";
 

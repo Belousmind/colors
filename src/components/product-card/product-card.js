@@ -1,5 +1,4 @@
-import { colorsStore } from "../../store/data-store";
-import { addToCart } from "../../store/cart-store";
+import { colorsStore, addToCart } from "../../store/index";
 import { renderCart } from "../cart/cart-render";
 
 const cardTemplate = document.querySelector("#product-card-template");

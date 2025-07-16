@@ -1,4 +1,4 @@
-import { updateCartItem, clearCart } from "../../store/cart-store";
+import { updateCartItem, clearCart } from "../../store/index";
 import { renderCart } from "./cart-render";
 import { openModal, closeModal } from "../modal/modal";
 import { menuIsOpen, closeMenu } from "../header/header";
