@@ -11,7 +11,7 @@ import { loadData } from './api/load-data';
 import { colorsStore } from './store/data-store';
 
 const BASE_URL = 'https://api.jsonbin.io/v3/b/6873eecc6063391d31acdc2c';
-const API_KEY = '$2a$10$cJfNvI6eOjFmFBVgFY9WouMjG1S.NMP1oDxFZ.IMNIdYshMKYArEq';
+const API_KEY = '$2a$10$cJfNvI6eOjFmFBVgFY9WouMjG1S.NMP1oDxFZ.IMNIdYshMKYArE';
 
 document.addEventListener('DOMContentLoaded', () => {
   initApp();
@@ -21,16 +21,17 @@ export const body = document.querySelector('body');
 export const catalogCount = document.querySelector('.catalog__count');
 
 async function initApp() {
-  const colorsData = await loadData(BASE_URL, {
-    headers: { 'X-Master-Key': API_KEY },
-  });
+  try {
+    const colorsData = await loadData(BASE_URL, {
+      headers: { 'X-Master-Key': API_KEY },
+    });
 
-  if (colorsData?.data?.record) {
     const colors = colorsData.data.record;
     colorsStore.set(colors);
     catalogCount.textContent = `${colors.length} ${getItemWord(colors)}`;
     CardsRender(colorsStore.get());
-  } else {
+  } catch (e) {
+    console.error('Ошибка загрузки данных:', e);
     CardsRender([], true);
   }
 }
