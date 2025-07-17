@@ -11,7 +11,7 @@ import { loadData } from './api/load-data';
 import { colorsStore } from './store/data-store';
 
 const BASE_URL = 'https://api.jsonbin.io/v3/b/6873eecc6063391d31acdc2c';
-const API_KEY = '$2a$10$cJfNvI6eOjFmFBVgFY9WouMjG1S.NMP1oDxFZ.IMNIdYshMKYArE';
+const API_KEY = '$2a$10$cJfNvI6eOjFmFBVgFY9WouMjG1S.NMP1oDxFZ.IMNIdYshMKYArEq';
 
 document.addEventListener('DOMContentLoaded', () => {
   initApp();
